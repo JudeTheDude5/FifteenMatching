@@ -4,7 +4,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 public class FifteenController implements View.OnTouchListener, View.OnClickListener{
-
+    //Got these implementations off the Android DSK and from lab
    private FifteenView view;
 
    private FifteenModel model;
@@ -30,7 +30,7 @@ public class FifteenController implements View.OnTouchListener, View.OnClickList
    public FifteenController(FifteenView v) {
        view = v;
 
-       model = view.getSquareModel();
+       model = view.modelGrabber();
     }
 
 
@@ -63,7 +63,7 @@ public class FifteenController implements View.OnTouchListener, View.OnClickList
             }
         }
         else if(motionEvent.getActionMasked() == 2) {
-
+            //Moves the box when your click is held on it
             float changeX = Math.abs(xClick - motionEvent.getX());
             float changeY = Math.abs(yClick - motionEvent.getY());
 
@@ -84,6 +84,8 @@ public class FifteenController implements View.OnTouchListener, View.OnClickList
             view.invalidate();
         }
         else if(motionEvent.getActionMasked() == 1) {
+            //Checks if box you drop the box over is empty and swaps it if it is, returns your
+            //Clicked box to it's postion if the other box isn't empty
             if(motionEvent.getX() <= view.emptyBox.x + model.BOX_SIZE
                     && motionEvent.getY() <= view.emptyBox.y + model.BOX_SIZE
                     && motionEvent.getX() >= view.emptyBox.x
@@ -136,6 +138,7 @@ public class FifteenController implements View.OnTouchListener, View.OnClickList
 
     @Override
     public void onClick(View view) {
+       //Reset Button
         this.view.reset();
         this.view.invalidate();
     }
