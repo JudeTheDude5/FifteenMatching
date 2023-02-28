@@ -108,7 +108,7 @@ public class FifteenController implements View.OnTouchListener, View.OnClickList
 
                 //Checks if the boxes are all in numerical order
                 boolean win = true;
-                for(int i = 0; i < view.boxes.size(); ++i) {
+                for(int i = 0; i < view.boxes.size() - 1; ++i) {
                     if(view.boxes.get(i).boxValue != i+1) {
                         win = false;
                         view.invalidate();
@@ -127,10 +127,10 @@ public class FifteenController implements View.OnTouchListener, View.OnClickList
             }
             else {
                 modelStorage.x = xOrigin;
-                modelStorage.y = xOrigin;
+                modelStorage.y = yOrigin;
+                view.invalidate();
             }
         }
-
         return true;
     }
 

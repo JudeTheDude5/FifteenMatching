@@ -51,11 +51,11 @@ public class FifteenView extends SurfaceView {
         boxes.add(new FifteenModel(3*10+2*size,3*10+2*size));
         boxes.add(new FifteenModel(4*10+3*size,3*10+2*size));
 
-        boxes.add(new FifteenModel(10,3*10+3*size));
-        boxes.add(new FifteenModel(2*10+size,3*10+3*size));
-        boxes.add(new FifteenModel(3*10+2*size,3*10+3*size));
+        boxes.add(new FifteenModel(10,4*10+3*size));
+        boxes.add(new FifteenModel(2*10+size,4*10+3*size));
+        boxes.add(new FifteenModel(3*10+2*size,4*10+3*size));
 
-        emptyBox = new FifteenModel(4*10+3*size,3*10+3*size);
+        emptyBox = new FifteenModel(4*10+3*size,4*10+3*size);
         boxes.add(emptyBox);
         emptyBoxIndex = 15;
 
@@ -96,6 +96,7 @@ public class FifteenView extends SurfaceView {
 
         }
         m.get(15).boxValue = 16;
+
     }
 
     public void reset() {
