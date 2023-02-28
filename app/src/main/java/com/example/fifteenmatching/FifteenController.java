@@ -63,10 +63,11 @@ public class FifteenController implements View.OnTouchListener, View.OnClickList
             }
         }
         else if(motionEvent.getActionMasked() == 2) {
-            float xChanged = Math.abs(xClick - motionEvent.getX());
-            float yChanged = Math.abs(yClick - motionEvent.getY());
 
-            if (xChanged > yChanged) {
+            float changeX = Math.abs(xClick - motionEvent.getX());
+            float changeY = Math.abs(yClick - motionEvent.getY());
+
+            if (changeX > changeY) {
                 horizontalMovement = true;
             }
             else {
@@ -74,10 +75,10 @@ public class FifteenController implements View.OnTouchListener, View.OnClickList
             }
 
             if(horizontalMovement == true) {
-                modelStorage.x = motionEvent.getX() - model.BOX_SIZE;
+                modelStorage.x = motionEvent.getX() - model.BOX_SIZE/2;
             }
             else {
-                modelStorage.y = motionEvent.getY() - model.BOX_SIZE;
+                modelStorage.y = motionEvent.getY() - model.BOX_SIZE/2;
             }
 
             view.invalidate();

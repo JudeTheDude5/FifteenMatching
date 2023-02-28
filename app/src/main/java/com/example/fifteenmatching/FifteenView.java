@@ -114,10 +114,10 @@ public class FifteenView extends SurfaceView {
         boxes.get(10).setCoords(3*10+2*size,3*10+2*size);
         boxes.get(11).setCoords(4*10+3*size,3*10+2*size);
 
-        boxes.get(12).setCoords(10,3*10+3*size);
-        boxes.get(13).setCoords(2*10+size,3*10+3*size);
-        boxes.get(14).setCoords(3*10+2*size,3*10+3*size);
-        boxes.get(15).setCoords(4*10+3*size,3*10+3*size);
+        boxes.get(12).setCoords(10,4*10+3*size);
+        boxes.get(13).setCoords(2*10+size,4*10+3*size);
+        boxes.get(14).setCoords(3*10+2*size,4*10+3*size);
+        boxes.get(15).setCoords(4*10+3*size,4*10+3*size);
 
         emptyBox = boxes.get(15);
         emptyBoxIndex = 15;

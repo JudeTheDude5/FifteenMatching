@@ -1,7 +1,7 @@
 package com.example.fifteenmatching;
 
 public class FifteenModel {
-    public static final int BOX_SIZE = 100;
+    public static final int BOX_SIZE = 150;
 
     public float x = 10;
 
